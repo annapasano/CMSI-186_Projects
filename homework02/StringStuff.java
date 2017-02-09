@@ -92,7 +92,7 @@ public class StringStuff {
    * @param s String containing the data to be parsed for &quot;odd&quot; letters
    * @return  String containing the &quot;odd&quot; letters from the input
    */
-   public static String evensOnly(String s ) {
+   public static String oddsOnly(String s ) {
       String str = s.toUpperCase();
       String odds = "";
       for (int i = 0; i <= str.length() - 1; i++) {
@@ -112,9 +112,22 @@ public class StringStuff {
    * @return  String containing the &quot;even&quot; letters from the input without duplicates
    */
    public static String evensOnlyNoDupes( String s ) {
+      String str = s.toUpperCase();
       String evens = "";
-      for (int i = 0; i <= s.length() - 1; i += 2) {
-         evens = evens + s.charAt(i);
+      for (int i = 0; i <= str.length() - 1; i++) {
+         char temp = str.charAt(i);
+         if (temp == 'B' || temp == 'D' || temp == 'F' || temp == 'H' || temp == 'J'|| temp == 'L' || temp == 'N' || temp == 'P' || temp == 'R' || temp == 'T'|| temp == 'V' || temp == 'X' || temp == 'Z') {
+            int j = 0;
+            do{
+               if (evens.length() > 0 && evens.charAt(j) == temp) {
+                  break;
+               }
+               if (evens.length() == 0 || j == evens.length()-1) {
+                  evens = evens + temp;     
+               }
+               j++;
+            }while(j <= evens.length() - 1);
+         }
       }
       return evens;
    }
@@ -127,9 +140,22 @@ public class StringStuff {
    * @return  String containing the &quot;odd&quot; letters from the input without duplicates
    */
    public static String oddsOnlyNoDupes( String s ) {
+      String str = s.toUpperCase();
       String odds = "";
-      for (int i = 1; i <= s.length() - 1; i += 2) {
-         odds = odds + s.charAt(i);
+      for (int i = 0; i <= str.length() - 1; i++) {
+         char temp = str.charAt(i);
+         if (temp == 'A' || temp == 'C' || temp == 'E' || temp == 'G' || temp == 'I'|| temp == 'K' || temp == 'M' || temp == 'O' || temp == 'Q' || temp == 'S'|| temp == 'U' || temp == 'W' || temp == 'Y') {
+            int j = 0;
+            do{
+               if (odds.length() > 0 && odds.charAt(j) == temp) {
+                  break;
+               }
+               if (odds.length() == 0 || j == odds.length()-1) {
+                  odds = odds + temp;     
+               }
+               j++;
+            }while(j <= odds.length() - 1);
+         }
       }
       return odds;
    }
@@ -154,26 +180,19 @@ public class StringStuff {
    * @param args String array containing command line parameters
    */
    public static void main( String args[] ) {
-      String blah = new String( "Blah blah blah" );
-      String woof = new String( "BCDBCDBCDBCDBCD" );
-      String pal1 = new String( "a" );
-      String pal2 = new String( "ab" );
-      String pal3 = new String( "aba" );
-      String pal4 = new String( "amanaplanacanalpanama" );
-      String pal5 = new String( "abba" );
-      System.out.println( containsVowel( blah ) );
-      System.out.println( containsVowel( woof ) );
-      System.out.println( isPalindrome( pal1 ) );
-      System.out.println( isPalindrome( pal2 ) );
-      System.out.println( isPalindrome( pal3 ) );
-      System.out.println( isPalindrome( pal4 ) );
-      System.out.println( isPalindrome( pal5 ) );
-      System.out.println( "evensOnly()        returns: " + evensOnly( "REHEARSALSZ" ) );
-      System.out.println( "evensOnly()        returns: " + evensOnly( "REhearSALsz" ) );
-      System.out.println( "evensOnlyNoDupes() returns: " + evensOnlyNoDupes( "REhearSALsz" ) );
-      System.out.println( "oddsOnly()         returns: " + oddsOnly( "xylophones" ) );
-      System.out.println( "oddsOnly()         returns: " + oddsOnly( "XYloPHonES" ) );
-      System.out.println( "oddsOnlyNoDupes()  returns: " + oddsOnlyNoDupes( "XYloPHonES" ) );
-      System.out.println( "reverse()          returns: " + reverse( "REHEARSALSZ" ) );
+      if (args.length == 0) {
+         System.out.println("No word given");
+         return;
+      }
+      String s = args[0];
+
+      System.out.println("word: " + s);
+      System.out.println("Contains Vowel: " + containsVowel(s));
+      System.out.println("isPalindrome: " + isPalindrome(s));
+      System.out.println("evensOnly: " + evensOnly(s));
+      System.out.println(" oddsOnly: " + oddsOnly(s));
+      System.out.println("evensOnlyNoDupes: " + evensOnlyNoDupes(s));
+      System.out.println("oddsOnlyNoDupes: " + oddsOnlyNoDupes(s));
+      System.out.println("reverse: " + reverse (s));
    }
 }
