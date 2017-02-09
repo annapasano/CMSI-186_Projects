@@ -44,8 +44,8 @@ public class StringStuffTester {
 
       System.out.println( "\nFIVE TESTS FOR containsVowel():" );
 
-      System.out.print( "   Test for Australia (String): " );
-      try { System.out.println( StringStuff.containsVowel( "Australia" ) ? "true" : "false" ); }
+      System.out.print( "   Test for Austra1ia (String): " );
+      try { System.out.println( StringStuff.containsVowel( "Austra1ia" ) ? "true" : "false" ); }
       catch( Exception e ) { System.out.println ( false ); }
 
       System.out.print( "   Test for diefied (String): " );
@@ -73,8 +73,8 @@ public class StringStuffTester {
 
     System.out.println( "\nFIVE TESTS FOR isPalindrome():" );
 
-      System.out.print( "   Test for Australia (String): " );
-      try { System.out.println( StringStuff.isPalindrome( "Australia" ) ? "true" : "false" ); }
+      System.out.print( "   Test for Austra1ia (String): " );
+      try { System.out.println( StringStuff.isPalindrome( "Austra1ia" ) ? "true" : "false" ); }
       catch( Exception e ) { System.out.println ( false ); }
 
       System.out.print( "   Test for diefied (String): " );
@@ -102,8 +102,8 @@ public class StringStuffTester {
 
     System.out.println( "\nFIVE TESTS FOR evensOnly():" );
 
-    System.out.print( "   Test for Australia (String): " );
-      try { System.out.println( StringStuff.evensOnly( "Australia" ).equals("THR") ? "true" : "false" ); }
+    System.out.print( "   Test for Austra1ia (String): " );
+      try { System.out.println( StringStuff.evensOnly( "Austra1ia" ).equals("THR") ? "true" : "false" ); }
       catch( Exception e ) { System.out.println ( false ); }
 
       System.out.print( "   Test for diefied (String): " );
@@ -130,8 +130,8 @@ public class StringStuffTester {
    public static void test_oddsOnly() {
     System.out.println( "\nFIVE TESTS FOR oddsOnly():" );
 
-    System.out.print( "   Test for Australia (String): " );
-      try { System.out.println( StringStuff.oddsOnly( "Australia" ).equals("AUSAIA") ? "true" : "false" ); }
+    System.out.print( "   Test for Austra1ia (String): " );
+      try { System.out.println( StringStuff.oddsOnly( "Austra1ia" ).equals("AUSAIA") ? "true" : "false" ); }
       catch( Exception e ) { System.out.println ( false ); }
 
       System.out.print( "   Test for diefied (String): " );
@@ -157,8 +157,8 @@ public class StringStuffTester {
    public static void test_evensOnlyNoDupes() {
     System.out.println( "\nFIVE TESTS FOR evensOnlyNoDupes():" );
 
-    System.out.print( "   Test for Australia (String): " );
-      try { System.out.println( StringStuff.evensOnlyNoDupes( "Australia" ).equals("THR") ? "true" : "false" ); }
+    System.out.print( "   Test for Austra1ia (String): " );
+      try { System.out.println( StringStuff.evensOnlyNoDupes( "Austra1ia" ).equals("THR") ? "true" : "false" ); }
       catch( Exception e ) { System.out.println ( false ); }
 
       System.out.print( "   Test for diefied (String): " );
@@ -184,8 +184,8 @@ public class StringStuffTester {
    public static void test_oddsOnlyNoDupes() {
     System.out.println( "\nFIVE TESTS FOR oddsOnlyNoDupes():" );
 
-    System.out.print( "   Test for Australia (String): " );
-      try { System.out.println( StringStuff.oddsOnlyNoDupes( "Australia" ).equals("AUSAIA") ? "true" : "false" ); }
+    System.out.print( "   Test for Austra1ia (String): " );
+      try { System.out.println( StringStuff.oddsOnlyNoDupes( "Austra1ia" ).equals("AUSAIA") ? "true" : "false" ); }
       catch( Exception e ) { System.out.println ( false ); }
 
       System.out.print( "   Test for diefied (String): " );
@@ -211,8 +211,8 @@ public class StringStuffTester {
    public static void test_reverse() {
     System.out.println( "\nFIVE TESTS FOR reverse():" );
 
-    System.out.print( "   Test for Australia (String): " );
-      try { System.out.println( StringStuff.reverse( "Australia" ).equals("ailartsuA") ? "true" : "false" ); }
+    System.out.print( "   Test for Austra1ia (String): " );
+      try { System.out.println( StringStuff.reverse( "Austra1ia" ).equals("ai1artsuA") ? "true" : "false" ); }
       catch( Exception e ) { System.out.println ( false ); }
 
       System.out.print( "   Test for diefied (String): " );
