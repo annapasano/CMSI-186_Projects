@@ -1,8 +1,8 @@
 /** ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
  *  File name     :  StringStuffTester.java
  *  Purpose       :  A test harness file for testing out the methods in the "StringStuff.java" class
- *  Author        :  B.J. Johnson
- *  Date          :  2017-01-25
+ *  Author        :  Anna Pasano
+ *  Date          :  2017-02 -08
  *  Description   :  This file provides the "test harness" for checking out the methods which are part of
  *                   the homework02 assignment.  It also provides examples of proper documentation, and
  *                   uses the source file header template as specified in the "Greeter.java" template file
@@ -103,23 +103,23 @@ public class StringStuffTester {
     System.out.println( "\nFIVE TESTS FOR evensOnly():" );
 
     System.out.print( "   Test for Austra1ia (String): " );
-      try { System.out.println( StringStuff.evensOnly( "Austra1ia" ).equals("THR") ? "true" : "false" ); }
+      try { System.out.println( StringStuff.evensOnly( "Austra1ia" ).equals("THR") ? "true" + StringStuff.evensOnly( "THR" ): "false" ); }
       catch( Exception e ) { System.out.println ( false ); }
 
       System.out.print( "   Test for diefied (String): " );
-      try { System.out.println( StringStuff.evensOnly( "diefied" ).equals("DFD") ? "true" : "false" ); }
+      try { System.out.println( StringStuff.evensOnly( "diefied" ).equals("DFD") ? "true" + StringStuff.evensOnly( "DFD" ) : "false" ); }
       catch( Exception e ) { System.out.println ( false ); }
 
       System.out.print( "   Test for ANNA (String): " );
-      try { System.out.println( StringStuff.evensOnly( "ANNA" ).equals("NN") ? "true" : "false" ); }
+      try { System.out.println( StringStuff.evensOnly( "ANNA" ).equals("NN") ? "true" + StringStuff.evensOnly( "NN" ) : "false" ); }
       catch( Exception e ) { System.out.println ( false ); }
 
       System.out.print( "   Test for FanDanGo (String): " );
-      try { System.out.println( StringStuff.evensOnly( "FanDanGo" ).equals("FNDN") ? "true" : "false" ); }
+      try { System.out.println( StringStuff.evensOnly( "FanDanGo" ).equals("FNDN") ? "true" + StringStuff.evensOnly( "FNDN" ): "false" ); }
       catch( Exception e ) { System.out.println ( false ); }
 
       System.out.print( "   Test for mxsnclr (String): " );
-      try { System.out.println( StringStuff.evensOnly( "mxsnclr" ).equals("XNLR") ? "true" : "false" ); }
+      try { System.out.println( StringStuff.evensOnly( "mxsnclr" ).equals("XNLR") ? "true" + StringStuff.evensOnly( "XNLR" ) : "false" ); }
       catch( Exception e ) { System.out.println ( false ); }
    }
 
@@ -131,23 +131,23 @@ public class StringStuffTester {
     System.out.println( "\nFIVE TESTS FOR oddsOnly():" );
 
     System.out.print( "   Test for Austra1ia (String): " );
-      try { System.out.println( StringStuff.oddsOnly( "Austra1ia" ).equals("AUSAIA") ? "true" : "false" ); }
+      try { System.out.println( StringStuff.oddsOnly( "Austra1ia" ).equals("AUSAIA") ? "true" + StringStuff.oddsOnly( "AUSAIA" ) : "false" ); }
       catch( Exception e ) { System.out.println ( false ); }
 
       System.out.print( "   Test for diefied (String): " );
-      try { System.out.println( StringStuff.oddsOnly( "diefied" ).equals("IEIE") ? "true" : "false" ); }
+      try { System.out.println( StringStuff.oddsOnly( "diefied" ).equals("IEIE") ? "true" + StringStuff.oddsOnly( "IEIE" ): "false" ); }
       catch( Exception e ) { System.out.println ( false ); }
 
       System.out.print( "   Test for ANNA (String): " );
-      try { System.out.println( StringStuff.oddsOnly( "ANNA" ).equals("AA") ? "true" : "false" ); }
+      try { System.out.println( StringStuff.oddsOnly( "ANNA" ).equals("AA") ? "true" + StringStuff.oddsOnly( "AA" ) : "false" ); }
       catch( Exception e ) { System.out.println ( false ); }
 
       System.out.print( "   Test for FanDanGo (String): " );
-      try { System.out.println( StringStuff.oddsOnly( "FanDanGo" ).equals("ADNO") ? "true" : "false" ); }
+      try { System.out.println( StringStuff.oddsOnly( "FanDanGo" ).equals("ADO") ? "true" + StringStuff.oddsOnly( "ADO" ) : "false" ); }
       catch( Exception e ) { System.out.println ( false ); }
 
       System.out.print( "   Test for mxsnclr (String): " );
-      try { System.out.println( StringStuff.oddsOnly( "mxsnclr" ).equals("MSC") ? "true" : "false" ); }
+      try { System.out.println( StringStuff.oddsOnly( "mxsnclr" ).equals("MSC") ? "true" + StringStuff.oddsOnly( "MSC") : "false" ); }
       catch( Exception e ) { System.out.println ( false ); }
    }
 
@@ -158,23 +158,23 @@ public class StringStuffTester {
     System.out.println( "\nFIVE TESTS FOR evensOnlyNoDupes():" );
 
     System.out.print( "   Test for Austra1ia (String): " );
-      try { System.out.println( StringStuff.evensOnlyNoDupes( "Austra1ia" ).equals("THR") ? "true" : "false" ); }
+      try { System.out.println( StringStuff.evensOnlyNoDupes( "Austra1ia" ).equals("THR") ? "true" + StringStuff.evensOnlyNoDupes( "THR" ) : "false" ); }
       catch( Exception e ) { System.out.println ( false ); }
 
       System.out.print( "   Test for diefied (String): " );
-      try { System.out.println( StringStuff.evensOnlyNoDupes( "diefied" ).equals("DFD") ? "true" : "false" ); }
+      try { System.out.println( StringStuff.evensOnlyNoDupes( "diefied" ).equals("DFD") ? "true" + StringStuff.evensOnlyNoDupes( "DF" ): "false" ); }
       catch( Exception e ) { System.out.println ( false ); }
 
       System.out.print( "   Test for ANNA (String): " );
-      try { System.out.println( StringStuff.evensOnlyNoDupes( "ANNA" ).equals("NN") ? "true" : "false" ); }
+      try { System.out.println( StringStuff.evensOnlyNoDupes( "ANNA" ).equals("NN") ? "true" + StringStuff.evensOnlyNoDupes( "N" ) : "false" ); }
       catch( Exception e ) { System.out.println ( false ); }
 
       System.out.print( "   Test for FanDanGo (String): " );
-      try { System.out.println( StringStuff.evensOnlyNoDupes( "FanDanGo" ).equals("FNDN") ? "true" : "false" ); }
+      try { System.out.println( StringStuff.evensOnlyNoDupes( "FanDanGo" ).equals("FNDN") ? "true" + StringStuff.evensOnlyNoDupes( "FND" ) : "false" ); }
       catch( Exception e ) { System.out.println ( false ); }
 
       System.out.print( "   Test for mxsnclr (String): " );
-      try { System.out.println( StringStuff.evensOnlyNoDupes( "mxsnclr" ).equals("XNLR") ? "true" : "false" ); }
+      try { System.out.println( StringStuff.evensOnlyNoDupes( "mxsnclr" ).equals("XNLR") ? "true" + StringStuff.evensOnlyNoDupes( "XNLR" ): "false" ); }
       catch( Exception e ) { System.out.println ( false ); }
    }
 
@@ -185,23 +185,23 @@ public class StringStuffTester {
     System.out.println( "\nFIVE TESTS FOR oddsOnlyNoDupes():" );
 
     System.out.print( "   Test for Austra1ia (String): " );
-      try { System.out.println( StringStuff.oddsOnlyNoDupes( "Austra1ia" ).equals("AUSAIA") ? "true" : "false" ); }
+      try { System.out.println( StringStuff.oddsOnlyNoDupes( "Austra1ia" ).equals("AUSAIA") ? "true" + StringStuff.oddsOnlyNoDupes( "AUSI" ) : "false" ); }
       catch( Exception e ) { System.out.println ( false ); }
 
       System.out.print( "   Test for diefied (String): " );
-      try { System.out.println( StringStuff.oddsOnlyNoDupes( "diefied" ).equals("IEIE") ? "true" : "false" ); }
+      try { System.out.println( StringStuff.oddsOnlyNoDupes( "diefied" ).equals("IEIE") ? "true" + StringStuff.oddsOnlyNoDupes( "IE" ) : "false" ); }
       catch( Exception e ) { System.out.println ( false ); }
 
       System.out.print( "   Test for ANNA (String): " );
-      try { System.out.println( StringStuff.oddsOnlyNoDupes( "ANNA" ).equals("AA") ? "true" : "false" ); }
+      try { System.out.println( StringStuff.oddsOnlyNoDupes( "ANNA" ).equals("AA") ? "true" + StringStuff.oddsOnlyNoDupes( "A") : "false" ); }
       catch( Exception e ) { System.out.println ( false ); }
 
       System.out.print( "   Test for FanDanGo (String): " );
-      try { System.out.println( StringStuff.oddsOnlyNoDupes( "FanDanGo" ).equals("ADNO") ? "true" : "false" ); }
+      try { System.out.println( StringStuff.oddsOnlyNoDupes( "FanDanGo" ).equals("ADNO") ? "true" + StringStuff.oddsOnlyNoDupes( "ADO" ) : "false" ); }
       catch( Exception e ) { System.out.println ( false ); }
 
       System.out.print( "   Test for mxsnclr (String): " );
-      try { System.out.println( StringStuff.oddsOnlyNoDupes( "mxsnclr" ).equals("MSC") ? "true" : "false" ); }
+      try { System.out.println( StringStuff.oddsOnlyNoDupes( "mxsnclr" ).equals("MSC") ? "true"+ StringStuff.oddsOnlyNoDupes( "MSC" ) : "false" ); }
       catch( Exception e ) { System.out.println ( false ); }
    }
 
@@ -212,23 +212,23 @@ public class StringStuffTester {
     System.out.println( "\nFIVE TESTS FOR reverse():" );
 
     System.out.print( "   Test for Austra1ia (String): " );
-      try { System.out.println( StringStuff.reverse( "Austra1ia" ).equals("ai1artsuA") ? "true" : "false" ); }
+      try { System.out.println( StringStuff.reverse( "Austra1ia" ).equals("ai1artsuA") ? "true" + StringStuff.reverse( "ai1artsuA" ) : "false" ); }
       catch( Exception e ) { System.out.println ( false ); }
 
       System.out.print( "   Test for diefied (String): " );
-      try { System.out.println( StringStuff.reverse( "diefied" ).equals("diefied") ? "true" : "false" ); }
+      try { System.out.println( StringStuff.reverse( "diefied" ).equals("diefied") ? "true" + StringStuff.reverse( "diefied") : "false" ); }
       catch( Exception e ) { System.out.println ( false ); }
 
       System.out.print( "   Test for ANNA (String): " );
-      try { System.out.println( StringStuff.reverse( "ANNA" ).equals("AnnA") ? "true" : "false" ); }
+      try { System.out.println( StringStuff.reverse( "ANNA" ).equals("AnnA") ? "true" + StringStuff.reverse( "ANNA" ) : "false" ); }
       catch( Exception e ) { System.out.println ( false ); }
 
       System.out.print( "   Test for FanDanGo (String): " );
-      try { System.out.println( StringStuff.reverse( "FanDanGo" ).equals("oGnaDnaF") ? "true" : "false" ); }
+      try { System.out.println( StringStuff.reverse( "FanDanGo" ).equals("oGnaDnaF") ? "true " + StringStuff.reverse( "oGnaDnaF" ) : "false" ); }
       catch( Exception e ) { System.out.println ( false ); }
 
       System.out.print( "   Test for mxsnclr (String): " );
-      try { System.out.println( StringStuff.reverse( "mxsnclr" ).equals("rlcnsxm") ? "true" : "false" ); }
+      try { System.out.println( StringStuff.reverse( "mxsnclr" ).equals("rlcnsxm") ? "true " + StringStuff.reverse( "rlcsxm" ) : "false" ); }
       catch( Exception e ) { System.out.println ( false ); }
    }
 
