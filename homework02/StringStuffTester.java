@@ -212,7 +212,7 @@ public class StringStuffTester {
     System.out.println( "\nFIVE TESTS FOR reverse():" );
 
     System.out.print( "   Test for Austra1ia (String): " );
-      try { System.out.println( StringStuff.reverse( "Austra1ia" ).equals("ai1artsuA") ? "true" + StringStuff.reverse( "ai1artsuA" ) : "false" ); }
+      try { System.out.println( StringStuff.reverse( "Austra1ia" ).equals("ai1artsuA") ? "true" + StringStuff.reverse( "Austra1ia" ) : "false" ); }
       catch( Exception e ) { System.out.println ( false ); }
 
       System.out.print( "   Test for diefied (String): " );
@@ -224,11 +224,11 @@ public class StringStuffTester {
       catch( Exception e ) { System.out.println ( false ); }
 
       System.out.print( "   Test for FanDanGo (String): " );
-      try { System.out.println( StringStuff.reverse( "FanDanGo" ).equals("oGnaDnaF") ? "true " + StringStuff.reverse( "oGnaDnaF" ) : "false" ); }
+      try { System.out.println( StringStuff.reverse( "FanDanGo" ).equals("oGnaDnaF") ? "true " + StringStuff.reverse( "FanDanGo" ) : "false" ); }
       catch( Exception e ) { System.out.println ( false ); }
 
       System.out.print( "   Test for mxsnclr (String): " );
-      try { System.out.println( StringStuff.reverse( "mxsnclr" ).equals("rlcnsxm") ? "true " + StringStuff.reverse( "rlcsxm" ) : "false" ); }
+      try { System.out.println( StringStuff.reverse( "mxsnclr" ).equals("rlcnsxm") ? "true " + StringStuff.reverse( "mxsnclr" ) : "false" ); }
       catch( Exception e ) { System.out.println ( false ); }
    }
 
