@@ -1,8 +1,8 @@
 /** ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
  *  File name     :  DiceSet.java
  *  Purpose       :  Provides a class describing a set of dice
- *  Author        :  B.J. Johnson
- *  Date          :  2017-02-09
+ *  Author        :  Anna Pasano
+ *  Date          :  2017-02-20
  *  Description   :  This class provides everything needed (pretty much) to describe a set of dice.  The
  *                   idea here is to have an implementing class that uses the Die.java class.  Includes
  *                   the following:
@@ -11,7 +11,6 @@
  *                   public void roll();                              // Randomly rolls all of the dice in this set
  *                   public void rollIndividual( int i );             // Randomly rolls only the ith die in this set
  *                   public int getIndividual( int i );               // Gets the value of the ith die in this set
- *                   public void setIndividual( int i, int jValue );  // Sets the ith die in this set to the value of jValue
  *                   public String toString();                        // Returns a stringy representation of this set of dice
  *                   public static String toString( DiceSet ds );     // Classwide version of the preceding instance method
  *                   public boolean isIdentical( DiceSet ds );        // Returns true iff this set is identical to the set ds
@@ -47,7 +46,7 @@ public class DiceSet {
    */
    public DiceSet( int count, int sides ) {
       ds = new Die[ count ];
-      for (int i = 0; i <= ds.length; i++) {
+      for (int i = 0; i <= ds.length - 1; i++) {
         ds[i] = new Die (sides);
       }
    }
@@ -56,13 +55,20 @@ public class DiceSet {
    * @return the sum of all the dice values in the set
    */
    public int sum() {
-      return 0;
+      int sum = 0;
+      for (int i = 0; i <= ds.length -1; i++) {
+        sum = sum + ds[i].getValue();
+      }
+      return sum;
    }
 
   /**
    * Randomly rolls all of the dice in this set
    */
    public int roll() {
+      for (int i = 0; i <= ds.length - 1; i++) {
+        ds[i].roll();
+      }
       return 0;
    }
 
@@ -72,7 +78,10 @@ public class DiceSet {
    * @trhows IllegalArgumentException if the index is out of range
    */
    public int rollIndividual( int dieIndex ) {
-      return 0;
+      if (dieIndex > ds.length -1) {
+      throw new IllegalArgumentException(); 
+    }
+    return ds[dieIndex].roll();
    }
 
   /**
@@ -81,7 +90,10 @@ public class DiceSet {
    * @trhows IllegalArgumentException if the index is out of range
    */
    public int getIndividual( int dieIndex ) {
-      return -999;
+    if (dieIndex > ds.length -1) {
+      throw new IllegalArgumentException(); 
+    }
+      return ds[dieIndex].getValue();
    }
 
   /**
@@ -90,24 +102,27 @@ public class DiceSet {
    * @param  dieValue int of the value to set for that die
    * @trhows IllegalArgumentException if the index is out of range
    */
-   public void setIndividual( int dieIndex, int dieValue ) {
+   // public void setIndividual( int dieIndex, int dieValue ) {
 
-   }
+   // }
 
   /**
    * @return Public Instance method that returns a String representation of the DiceSet instance
    */
    public String toString() {
       String result = "";
+      for (int i = 0; i <= ds.length -1; i++ ){
+        result = result + "[" + ds[i].getValue() + "]";
+      }
       return result;
    }
 
   /**
    * @return Class-wide version of the preceding instance method
    */
-   public static String toString( DiceSet ds ) {
-      return "";
-   }
+   // public static String toString( DiceSet ds ) {
+   //    return "";
+   // }
 
   /**
    * @return  tru iff this set is identical to the set passed as an argument
@@ -120,6 +135,12 @@ public class DiceSet {
    */
    public static void main( String[] args ) {
       // You do this part!
+      DiceSet steves = new DiceSet(5,6);
+      steves.roll();
+      System.out.println(steves + " sum: " + steves.sum());
+      steves.rollIndividual(3);
+      System.out.println(steves.getIndividual(2)); 
+      System.out.println(steves + " sum: " + steves.sum());
    }
 
 }

@@ -56,7 +56,6 @@ public class Die{
          
       }
       this.sides = nSides;
-      System.out.println(this.sides);
    }
 
   /**
