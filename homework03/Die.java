@@ -2,7 +2,7 @@
  *  File name     :  Die.java
  *  Purpose       :  Provides a class describing a single die that can be rolled
  *  @author       :  Anna Pasano
- *  Date          :  2017-02-20
+ *  Date          :  2017-02-23
  *  Description   :  This class provides the data fields and methods to describe a single game die.  A
  *                   die can have "N" sides.  Sides are randomly assigned sequential pip values, from 1
  *                   to N, with no repeating numbers.  A "normal" die would thus has six sides, with the
@@ -33,6 +33,7 @@
  *           -----  ----------  ------------  -----------------------------------------------------------
  *  @version 1.0.0  2017-02-06  B.J. Johnson  Initial writing and release
  *  @version 1.1.0  2017-02-17  B.J. Johnson  Filled in method code
+ *  @version 1.1.0  2017-02-21  Anna Pasano   Filled in methods 
  * ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 public class Die{
 
@@ -53,7 +54,6 @@ public class Die{
    public Die( int nSides ) {
       if (nSides < MINIMUM_SIDES) {
          throw new IllegalArgumentException();
-         
       }
       this.sides = nSides;
    }
@@ -117,13 +117,13 @@ public class Die{
    */
    public static void main( String[] args ) {
       System.out.println( "Hello world from the Die class..." );
-      Die steve = new Die(6);
-      System.out.println("roll: " + steve.roll() + "\nsides: " + steve.getSides() + "\nvalue: " + steve.getValue());
-      steve.roll();
-      System.out.println(steve.getValue());
-      steve.setSides(10);
-      System.out.println("newsteve: " + steve.getSides());
-      System.out.println(steve);
+      Die rico = new Die(6);
+      System.out.println("roll: " + rico.roll() + "\nsides: " + rico.getSides() + "\nvalue: " + rico.getValue());
+      rico.roll();
+      System.out.println(rico.getValue());
+      rico.setSides(10);
+      System.out.println("new rico: " + rico.getSides());
+      System.out.println(rico);
 
    }
 
