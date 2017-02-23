@@ -43,6 +43,7 @@ public class Die{
    private int sides;
    private int pips;
    private final int MINIMUM_SIDES = 4;
+   private final int IMPOSSIBLE = 3;
 
    // public constructor:
   /**
@@ -53,6 +54,9 @@ public class Die{
    */
    public Die( int nSides ) {
       if (nSides < MINIMUM_SIDES) {
+         throw new IllegalArgumentException();
+      }
+      if (nSides == IMPOSSIBLE) {
          throw new IllegalArgumentException();
       }
       this.sides = nSides;
@@ -117,13 +121,13 @@ public class Die{
    */
    public static void main( String[] args ) {
       System.out.println( "Hello world from the Die class..." );
-      Die rico = new Die(6);
-      System.out.println("roll: " + rico.roll() + "\nsides: " + rico.getSides() + "\nvalue: " + rico.getValue());
-      rico.roll();
-      System.out.println(rico.getValue());
-      rico.setSides(10);
-      System.out.println("new rico: " + rico.getSides());
-      System.out.println(rico);
+      Die die = new Die(6);
+      System.out.println("roll: " + die.roll() + "\nsides: " + die.getSides() + "\nvalue: " + die.getValue());
+      die.roll();
+      System.out.println(die.getValue());
+      die.setSides(10);
+      System.out.println("new die: " + die.getSides());
+      System.out.println(die);
 
    }
 

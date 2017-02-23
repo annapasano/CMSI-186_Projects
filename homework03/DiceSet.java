@@ -6,7 +6,7 @@
  *  Description   :  This class provides everything needed (pretty much) to describe a set of dice.  The
  *                   idea here is to have an implementing class that uses the Die.java class.  Includes
  *                   the following:
- *                   public DiceSet( int k, int n );                  // Constructor for a set of k dice each with n-sides
+ *                   public DiceSet( int count, int sides );                  // Constructor for a set of k dice each with n-sides
  *                   public int sum();                                // Returns the present sum of this set of dice
  *                   public void roll();                              // Randomly rolls all of the dice in this set
  *                   public void rollIndividual( int i );             // Randomly rolls only the ith die in this set
@@ -25,7 +25,7 @@
  *  ---------------
  *            Rev      Date     Modified by:  Reason for change/modification
  *           -----  ----------  ------------  -----------------------------------------------------------
- *  @version 1.0.0  2017-02-21  Anna Pasano  Adding methods
+ *  @version 1.0.0  2017-02-23  Anna Pasano  Final methods and tests
  * ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 public class DiceSet {
 
@@ -162,16 +162,18 @@ public class DiceSet {
    */
    public static void main( String[] args ) {
       // You do this part!
-      DiceSet steve = new DiceSet(2,4);
-      DiceSet marko = new DiceSet (2,4);
+      DiceSet steve = new DiceSet(2,6);
+      DiceSet marko = new DiceSet (2,6);
       DiceSet bob = new DiceSet (5,9);
       DiceSet tim = new DiceSet (3,8);
       DiceSet richard = new DiceSet (1,21);
+      DiceSet jerry = new DiceSet (4,12);
       steve.roll();
       marko.roll();
       bob.roll();
       tim.roll();
       richard.roll();
+      jerry.roll();
 
       System.out.println("steve test: ");
       System.out.println("steve: " + steve);
@@ -186,7 +188,7 @@ public class DiceSet {
       System.out.println("marko: " + marko);
       System.out.println("sum: " + marko.sum());
       marko.rollIndividual(1);
-      System.out.println("roll individual (0): " + marko);
+      System.out.println("roll individual (1): " + marko);
       System.out.println("marko = marko? " + marko.isIdentical(marko));
 
       System.out.println("");
@@ -194,7 +196,7 @@ public class DiceSet {
       System.out.println("bob: " + bob);
       System.out.println("sum: " + bob.sum());
       bob.rollIndividual(4);
-      System.out.println("roll individual (0): " + bob);
+      System.out.println("roll individual (4): " + bob);
       System.out.println("bob = tim? " + bob.isIdentical(tim));
 
       System.out.println("");
@@ -202,7 +204,7 @@ public class DiceSet {
       System.out.println("tim: " + tim);
       System.out.println("sum: " + tim.sum());
       tim.rollIndividual(2);
-      System.out.println("roll individual (0): " + marko);
+      System.out.println("roll individual (2): " + marko);
       System.out.println("tim = richard? " + tim.isIdentical(richard));
       
       System.out.println("");
@@ -212,6 +214,14 @@ public class DiceSet {
       richard.rollIndividual(0);
       System.out.println("roll individual (0): " + richard);
       System.out.println("richard = steve? " + richard.isIdentical(steve));
+
+      System.out.println("");
+      System.out.println("jerry test: ");
+      System.out.println("jerry: " + jerry);
+      System.out.println("sum: " + jerry.sum());
+      jerry.rollIndividual(5);
+      System.out.println("roll individual (5): " + jerry);
+      System.out.println("jerry = richard? " + jerry.isIdentical(richard));
    }
 
 }

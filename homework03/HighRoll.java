@@ -13,7 +13,7 @@
  *  ---------------
  *            Rev      Date     Modified by:  Reason for change/modification
  *           -----  ----------  ------------  -----------------------------------------------------------
- *  @version 1.0.0  2017-02-21  Anna Pasano   Initial writing and release
+ *  @version 1.0.0  2017-02-22  Anna Pasano   Initial writing and release
  * ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 import java.util.*;
 import java.util.Scanner;
@@ -39,7 +39,7 @@ public class HighRoll {
          int sides = sc.nextInt();
          return new DiceSet (count, sides);
       } catch (InputMismatchException e) {
-         System.out.println("Not a Valid Number");
+         System.out.println(" Not a Valid Number ");
          createDiceSetPrompt();
       } catch (IllegalArgumentException e) {
          System.out.println("Count must be a natural number and there must be greater than 4 sides.");
