@@ -14,7 +14,7 @@
  *  ---------------
  *            Rev      Date     Modified by:  Reason for change/modification
  *           -----  ----------  ------------  -----------------------------------------------------------
- *  @version 1.0.0  2017-02-28   Anna Pasano  Clock Methods
+ *  @version 1.0.0  2017-02-28   Anna Pasano  Clock methods and main
  * ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
 public class Clock {
@@ -169,95 +169,18 @@ public class Clock {
       
       System.out.println(" ");   
       System.out.println("Creating a new clock: ");
-      Clock rick = new Clock(90.0);
+      Clock john = new Clock(90.0);
 
-      rick.tick();
-      System.out.println("Current Rick: " + rick.toString());
-      System.out.println("hour hand angle: " + rick.getHourHandAngle());
-      System.out.println("minute hand angle: " + rick.getMinuteHandAngle());
-      System.out.println("hand angle: " + rick.getHandAngle());
-      System.out.println("elapsed seconds: " + rick.getTotalSeconds());
-
-      System.out.println(" ");   
-      System.out.println("Creating a new clock: ");
-      Clock fred = new Clock(.0625);
-
-      fred.tick();
-      System.out.println("Current Fred: " + fred.toString());
-      System.out.println("hour hand angle: " + fred.getHourHandAngle());
-      System.out.println("minute hand angle: " + fred.getMinuteHandAngle());
-      System.out.println("hand angle: " + fred.getHandAngle());
-      System.out.println("elapsed seconds: " + fred.getTotalSeconds());
+      john.tick();
+      System.out.println("Current John: " + john.toString());
+      System.out.println("hour hand angle: " + john.getHourHandAngle());
+      System.out.println("minute hand angle: " + john.getMinuteHandAngle());
+      System.out.println("hand angle: " + john.getHandAngle());
+      System.out.println("elapsed seconds: " + john.getTotalSeconds());
 
       System.out.println(" ");   
       System.out.println("Creating a new clock: ");
-      Clock bill = new Clock(43200);
-
-      bill.tick();
-      System.out.println("Current Bill: " + bill.toString());
-      System.out.println("hour hand angle: " + bill.getHourHandAngle());
-      System.out.println("minute hand angle: " + bill.getMinuteHandAngle());
-      System.out.println("hand angle: " + bill.getHandAngle());
-      System.out.println("elapsed seconds: " + bill.getTotalSeconds());
-
-      System.out.println(" ");   
-      System.out.println("Creating a new clock: ");
-      Clock chad = new Clock(86400);
-
-      chad.tick();
-      System.out.println("Current Chad: " + chad.toString());
-      System.out.println("hour hand angle: " + chad.getHourHandAngle());
-      System.out.println("minute hand angle: " + chad.getMinuteHandAngle());
-      System.out.println("hand angle: " + chad.getHandAngle());
-      System.out.println("elapsed seconds: " + chad.getTotalSeconds());
-
-      System.out.println(" ");   
-      System.out.println("Creating a new clock: ");
-      Clock phillip = new Clock(0.00003);
-
-      phillip.tick();
-      System.out.println("Current Phillip: " + phillip.toString());
-      System.out.println("hour hand angle: " + phillip.getHourHandAngle());
-      System.out.println("minute hand angle: " + phillip.getMinuteHandAngle());
-      System.out.println("hand angle: " + phillip.getHandAngle());
-      System.out.println("elapsed seconds: " + phillip.getTotalSeconds());
-
-      System.out.println(" ");   
-      System.out.println("Creating a new clock: ");
-      Clock jack = new Clock(120960.0);
-
-      jack.tick();
-      System.out.println("Current Jack: " + jack.toString());
-      System.out.println("hour hand angle: " + jack.getHourHandAngle());
-      System.out.println("minute hand angle: " + jack.getMinuteHandAngle());
-      System.out.println("hand angle: " + jack.getHandAngle());
-      System.out.println("elapsed seconds: " + jack.getTotalSeconds());
-
-      System.out.println(" ");   
-      System.out.println("Creating a new clock: ");
-      Clock kurt = new Clock(0.123456789012345);
-
-      kurt.tick();
-      System.out.println("Current Kurt: " + kurt.toString());
-      System.out.println("hour hand angle: " + kurt.getHourHandAngle());
-      System.out.println("minute hand angle: " + kurt.getMinuteHandAngle());
-      System.out.println("hand angle: " + kurt.getHandAngle());
-      System.out.println("elapsed seconds: " + kurt.getTotalSeconds());
-
-      System.out.println(" ");   
-      System.out.println("Creating a new clock: ");
-      Clock martin = new Clock(9876543210987.0);
-
-      martin.tick();
-      System.out.println("Current Martin: " + martin.toString());
-      System.out.println("hour hand angle: " + martin.getHourHandAngle());
-      System.out.println("minute hand angle: " + martin.getMinuteHandAngle());
-      System.out.println("hand angle: " + martin.getHandAngle());
-      System.out.println("elapsed seconds: " + martin.getTotalSeconds());
-
-      System.out.println(" ");   
-      System.out.println("Creating a new clock: ");
-      Clock paul = new Clock(1.0);
+      Clock paul = new Clock(.0625);
 
       paul.tick();
       System.out.println("Current Paul: " + paul.toString());
@@ -265,5 +188,82 @@ public class Clock {
       System.out.println("minute hand angle: " + paul.getMinuteHandAngle());
       System.out.println("hand angle: " + paul.getHandAngle());
       System.out.println("elapsed seconds: " + paul.getTotalSeconds());
+
+      System.out.println(" ");   
+      System.out.println("Creating a new clock: ");
+      Clock george = new Clock(43200);
+
+      george.tick();
+      System.out.println("Current George: " + george.toString());
+      System.out.println("hour hand angle: " + george.getHourHandAngle());
+      System.out.println("minute hand angle: " + george.getMinuteHandAngle());
+      System.out.println("hand angle: " + george.getHandAngle());
+      System.out.println("elapsed seconds: " + george.getTotalSeconds());
+
+      System.out.println(" ");   
+      System.out.println("Creating a new clock: ");
+      Clock ringo = new Clock(86400);
+
+      ringo.tick();
+      System.out.println("Current Ringo: " + ringo.toString());
+      System.out.println("hour hand angle: " + ringo.getHourHandAngle());
+      System.out.println("minute hand angle: " + ringo.getMinuteHandAngle());
+      System.out.println("hand angle: " + ringo.getHandAngle());
+      System.out.println("elapsed seconds: " + ringo.getTotalSeconds());
+
+      System.out.println(" ");   
+      System.out.println("Creating a new clock: ");
+      Clock mick = new Clock(0.00003);
+
+      mick.tick();
+      System.out.println("Current Mick : " + mick.toString());
+      System.out.println("hour hand angle: " + mick.getHourHandAngle());
+      System.out.println("minute hand angle: " + mick.getMinuteHandAngle());
+      System.out.println("hand angle: " + mick.getHandAngle());
+      System.out.println("elapsed seconds: " + mick.getTotalSeconds());
+
+      System.out.println(" ");   
+      System.out.println("Creating a new clock: ");
+      Clock keith = new Clock(120960.0);
+
+      keith.tick();
+      System.out.println("Current Keith: " + keith.toString());
+      System.out.println("hour hand angle: " + keith.getHourHandAngle());
+      System.out.println("minute hand angle: " + keith.getMinuteHandAngle());
+      System.out.println("hand angle: " + keith.getHandAngle());
+      System.out.println("elapsed seconds: " + keith.getTotalSeconds());
+
+      System.out.println(" ");   
+      System.out.println("Creating a new clock: ");
+      Clock stevie = new Clock(0.123456789012345);
+
+      stevie.tick();
+      System.out.println("Current Stevie: " + stevie.toString());
+      System.out.println("hour hand angle: " + stevie.getHourHandAngle());
+      System.out.println("minute hand angle: " + stevie.getMinuteHandAngle());
+      System.out.println("hand angle: " + stevie.getHandAngle());
+      System.out.println("elapsed seconds: " + stevie.getTotalSeconds());
+
+      System.out.println(" ");   
+      System.out.println("Creating a new clock: ");
+      Clock lindsey = new Clock(9876543210987.0);
+
+      lindsey.tick();
+      System.out.println("Current Lindsey: " + lindsey.toString());
+      System.out.println("hour hand angle: " + lindsey.getHourHandAngle());
+      System.out.println("minute hand angle: " + lindsey.getMinuteHandAngle());
+      System.out.println("hand angle: " + lindsey.getHandAngle());
+      System.out.println("elapsed seconds: " + lindsey.getTotalSeconds());
+
+      System.out.println(" ");   
+      System.out.println("Creating a new clock: ");
+      Clock neil = new Clock(1.0);
+
+      neil.tick();
+      System.out.println("Current Neil: " + neil.toString());
+      System.out.println("hour hand angle: " + neil.getHourHandAngle());
+      System.out.println("minute hand angle: " + neil.getMinuteHandAngle());
+      System.out.println("hand angle: " + neil.getHandAngle());
+      System.out.println("elapsed seconds: " + neil.getTotalSeconds());
    }
 }

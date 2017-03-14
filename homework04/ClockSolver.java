@@ -15,7 +15,7 @@
  *  ---------------
  *            Rev      Date     Modified by:  Reason for change/modification
  *           -----  ----------  ------------  -----------------------------------------------------------
- *  @version 1.0.0  2017-03-13  Anna Pasano    Methods and main
+ *  @version 1.0.0  2017-03-13  Anna Pasano    ClockSolver methods and main
  * ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
 public class ClockSolver {
