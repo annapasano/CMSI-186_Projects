@@ -246,14 +246,14 @@ public class Clock {
 
       System.out.println(" ");   
       System.out.println("Creating a new clock: ");
-      Clock lindsey = new Clock(9876543210987.0);
+      Clock freddie = new Clock(9876543210987.0);
 
-      lindsey.tick();
-      System.out.println("Current Lindsey: " + lindsey.toString());
-      System.out.println("hour hand angle: " + lindsey.getHourHandAngle());
-      System.out.println("minute hand angle: " + lindsey.getMinuteHandAngle());
-      System.out.println("hand angle: " + lindsey.getHandAngle());
-      System.out.println("elapsed seconds: " + lindsey.getTotalSeconds());
+      freddie.tick();
+      System.out.println("Current Freddie: " + freddie.toString());
+      System.out.println("hour hand angle: " + freddie.getHourHandAngle());
+      System.out.println("minute hand angle: " + freddie.getMinuteHandAngle());
+      System.out.println("hand angle: " + freddie.getHandAngle());
+      System.out.println("elapsed seconds: " + freddie.getTotalSeconds());
 
       System.out.println(" ");   
       System.out.println("Creating a new clock: ");
