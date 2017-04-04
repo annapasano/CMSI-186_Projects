@@ -1,6 +1,6 @@
 /** ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
  *  File name     :  Ball.java
- *  Purpose       :  Provides a class defining methods for the ClockSolver class
+ *  Purpose       :  Provides a class defining methods for the SoccerSim class
  *  @author       :  Anna Pasano
  *  Date written  :  2017-03-22
  *  Description   :  This class provides a bunch of methods which may be useful for the SoccerSim class
@@ -8,7 +8,6 @@
  *
  *  Notes         :  None right now.  I'll add some as they occur.
  *  Warnings      :  None
- *  Exceptions    :  IllegalArgumentException when the input arguments are "hinky"
  * ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
  *  Revision Histor
  *  ---------------
@@ -59,6 +58,14 @@ public class Ball {
 
    public double getY() {
       return yPos;
+   }
+
+   public double getXdir() {
+      return xDir;
+   }
+
+   public double getYdir() {
+      return yDir;
    }
 
    /**
