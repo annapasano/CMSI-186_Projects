@@ -6,7 +6,7 @@
  *  Date written  :  2017-06-04
  *  Description   :  This class provides a bunch of methods which may be useful for the GinormousInt class
  *                   for Homework 06.
-  *
+ *
  *  Notes         :  None right now.  I'll add some as they occur.
  *  Warnings      :  None
  *  Exceptions    :  IllegalArgumentException when the input arguments are "hinky"
@@ -15,7 +15,7 @@
  *  ---------------
  *            Rev      Date     Modified by:  Reason for change/modification
  *           -----  ----------  ------------  -----------------------------------------------------------
- *  @version 1.0.0  2017-03-13  Anna Pasano    GinormousInt methods and main 
+ *  @version 1.0.0  2017-04-18  Anna Pasano    GinormousInt methods and main 
  * ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 public class GinormousInt {
 
@@ -27,15 +27,19 @@ public class GinormousInt {
    int sign;
 
    public GinormousInt( String value ) {
-      if (this.equals(ZERO)) {
-         gino = new int[value.length()+2];
-         size = 0;
+      if (value.equals("0")) {
+         gino = new int[1];
+         gino[0] = 0;
+         size = 1;
          sign = 0;
+         return;
       } 
-      if (this.equals(ONE)) {
-         gino = new int[value.length()+2];
-         size = gino.length-2;
+      if (value.equals("1")) {
+         gino = new int[3];
+         gino[0] = 1;
+         size = 1;
          sign = gino[gino.length-1] = 1;
+         return;
       }
       gino = new int[value.length()+2];
       size = gino.length-2;
@@ -55,8 +59,7 @@ public class GinormousInt {
    // // mimics one of the several java.math.BigInteger constructors
 
    public GinormousInt flipSign() {
-      gino[gino.length-1] = gino[gino.length-1] * -1;
-      sign = gino[gino.length-1];
+      sign = gino[gino.length-1] = gino[gino.length-1] * -1;
       return this;
    }
 
@@ -65,7 +68,7 @@ public class GinormousInt {
       if (value.equals(ZERO)) {
          return this;
       }
-      if (this.size > value.size && this.sign + value.sign == 2) {
+      if (this.size >= value.size && this.sign + value.sign != 0) {
          answer = this.gino;
          answer[this.gino.length-1] = this.sign;
          for (int i = 0; i < value.size; i++) {
@@ -168,17 +171,22 @@ public class GinormousInt {
       // if (value.sign == -1) {
       //    value.flipSign();
       // }
-      // GinormousInt counter = ZERO;
-      // // GinormousInt temp = ZERO;
-      // // System.out.println(value.multiply(counter));
-      // System.out.println(value.multiply(counter).compareTo(this));
-      // while (counter.compareTo(this) == -1) {
-      //    if (value.multiply(counter).compareTo(this) != -1) {
-      //       return value.subtract(ONE);
+
+      // if (this.compareTo(value) == -1) {
+      //    return ZERO;
+      // } else if (this.equals(value)) {
+      //    return ONE;
+      // } 
+      // else {
+      //    int i = 2;
+      //    System.out.println(value.multiply(new GinormousInt(i+"")).compareTo(this));
+      //    while (value.multiply(new GinormousInt(i+"")).compareTo(this) < 0) {
+      //       System.out.println(i);
+      //       i++;
       //    }
-      //    counter = counter.add(ONE);      
+      //    i--;
+      //    return new GinormousInt(i + "");
       // }
-      // return ONE;
    }
    // // returns a GinormousInt whose value is the quotient of this divided by the argument
 
@@ -192,13 +200,16 @@ public class GinormousInt {
       if (this.equals(ZERO)) {
          return "0";
       }
+      if (this.equals(ONE)) {
+         return "1";
+      }
       String s = "";
       // grab all numbers except sign
       for (int i = 0; i <= gino.length-2; i++) {
          s = gino[i] + s;
       }
-      // remove zeroes
-      while (s.charAt(0) == '0') {
+      // remove leading zeroes
+      while (s.charAt(0) == '0' && s.length()-1 > 0) {
          s = s.substring(1);
       }
       // add sign
@@ -217,10 +228,10 @@ public class GinormousInt {
       } else {
          if (this.size > value.size) {
             return 1 * this.sign;
-         } else if (value.size > this.size) {
+         } else if (this.size < value.size) {
             return -1 * this.sign;
          } else {
-            for (int i = gino.length-1; i >= 0; i--) {
+            for (int i = gino.length-2; i >= 0; i--) {
                if (this.gino[i] > value.gino[i]) {
                   return 1 * this.sign;
                } else if (this.gino[i] < value.gino[i]) {
@@ -236,6 +247,9 @@ public class GinormousInt {
    public boolean equals( Object x ) {
       if (x instanceof GinormousInt) {
          GinormousInt y = (GinormousInt) x;
+         if (y.size != this.size) {
+            return false;
+         }
          return this.compareTo(y) == 0;
       }
       return false;
@@ -251,19 +265,25 @@ public class GinormousInt {
       System.out.println(coco.compareTo(glen));
       System.out.println(glen.compareTo(glen));
       
+      GinormousInt test1 = ONE;
+      GinormousInt test2 = ZERO;
+      System.out.println(test1.add(test2));
+      GinormousInt temp = test1.add(new GinormousInt("20"));
+      System.out.println(temp);
+
       GinormousInt easyAdd1 = new GinormousInt("-1006");
-      GinormousInt easyAdd2 = new GinormousInt("-234");
+      GinormousInt easyAdd2 = new GinormousInt("-2344");
       System.out.println(easyAdd1.add(easyAdd2));
 
       GinormousInt easyAdd3 = new GinormousInt("-1006");
       GinormousInt easyAdd4 = new GinormousInt("1");
       System.out.println(easyAdd3.add(easyAdd4));
 
-      GinormousInt easyAdd5 = new GinormousInt("-1006");
-      System.out.println(easyAdd3.add(ONE));
-      System.out.println(easyAdd3.add(ZERO));
+      GinormousInt easyAdd5 = new GinormousInt("-100004");
+      System.out.println(easyAdd4.add(ONE));
+      System.out.println(easyAdd5.add(ZERO));
 
-      GinormousInt testSub1 = new GinormousInt("1133");
+      GinormousInt testSub1 = new GinormousInt("1234");
       GinormousInt testSub2 = new GinormousInt("234");
       System.out.println(testSub1.subtract(testSub2));
 
@@ -277,15 +297,15 @@ public class GinormousInt {
       System.out.println(testSub5.subtract(testSub6));
 
       GinormousInt testSub7 = new GinormousInt("10");
-      GinormousInt testSub8 = new GinormousInt("10");
+      GinormousInt testSub8 = new GinormousInt("1");
       System.out.println(testSub7.subtract(testSub8));
 
       GinormousInt testMul1 = new GinormousInt("12345");
       GinormousInt testMul2 = new GinormousInt("67");
       System.out.println(testMul1.multiply(testMul2));
 
-      GinormousInt testDiv1 = new GinormousInt("20");
-      GinormousInt testDiv2 = new GinormousInt("3");
-      System.out.println(testDiv1.divide(testDiv2));
+      // GinormousInt testDiv1 = new GinormousInt("20");
+      // GinormousInt testDiv2 = new GinormousInt("3");
+      // System.out.println(testDiv1.divide(testDiv2));
    }
 }
