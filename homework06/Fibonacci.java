@@ -1,7 +1,7 @@
 /** ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
  *  File name     :  Fibonacci.java
  *  @see
- *  @author       :  B.J. Johnson
+ *  @author       :  Anna Pasano
  *  Date written  :  2017-06-04
  *  Description   :  This class provides the methods to determine a Fibonnaci number, 
                      specifically catered to handle Ginormous Integers

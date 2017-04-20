@@ -301,7 +301,7 @@ public class GinormousInt {
       System.out.println(testSub7.subtract(testSub8));
 
       GinormousInt testMul1 = new GinormousInt("12345");
-      GinormousInt testMul2 = new GinormousInt("67");
+      GinormousInt testMul2 = new GinormousInt("68");
       System.out.println(testMul1.multiply(testMul2));
 
       // GinormousInt testDiv1 = new GinormousInt("20");
