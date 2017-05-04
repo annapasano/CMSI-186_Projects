@@ -43,7 +43,6 @@ public class Tuple {
       if( n < 0 ) {
          throw new IllegalArgumentException();
       }
-
       data = new int[n];
       for( int i = 0; i < n; i++ ) {
          data[i] = 0;
@@ -188,7 +187,7 @@ public class Tuple {
    @Override
    public String toString() {
       if( isImpossible()) {
-         return "Impossible";
+         return "Impossible tuple";
       }
 
       String result = "<";
